@@ -1,0 +1,68 @@
+{
+  "author": "Mola-maker",
+  "bugs": {
+    "url": "https://github.com/Mola-maker/dsh-cad2gis/issues"
+  },
+  "description": "Convert DWG/DXF to GIS (GeoPackage) with evidence, as DeepSeek Harness agent tools.",
+  "devDependencies": {
+    "@deepseek-ai/cordis": "^4.1.0",
+    "@deepseek-ai/dsh-tools": "^0.2.2-rc.1",
+    "yaml": "^2.3.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "market": {
+      "categories": [
+        "dev",
+        "workflow"
+      ],
+      "displayName": "CAD2GIS"
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.0 <0.3.0",
+    "node": ">=20"
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "homepage": "https://cad2gis.molamaker.cn/",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cad",
+    "gis",
+    "dwg",
+    "dxf",
+    "geopackage",
+    "qgis"
+  ],
+  "license": "Apache-2.0",
+  "main": "./lib/index.js",
+  "name": "dsh-cad2gis",
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.1.0",
+    "@deepseek-ai/dsh-tools": "^0.2.2-rc.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mola-maker/dsh-cad2gis.git"
+  },
+  "scripts": {
+    "check": "node --check lib/index.js",
+    "test": "node tests/smoke.mjs"
+  },
+  "type": "module",
+  "version": "0.1.0"
+}
